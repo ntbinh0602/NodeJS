@@ -20,11 +20,6 @@
         text-decoration: none;
       }
 
-      .button:hover {
-        text-decoration: none;
-        color: #fff;
-      }
-
       .btn-edit {
         background: rgb(74, 92, 151);
         color: #fff;
@@ -62,12 +57,7 @@
                 type="button"
                 >Edit</a
               >
-              <a
-                href="/delete-crud?id=<%=dataTable[i].id%>"
-                class="button btn-delete"
-                type="button"
-                >Delete</a
-              >
+              <a class="button btn-delete" type="button">Delete</a>
             </td>
           </tr>
           <% } %>

@@ -88,8 +88,10 @@ let deleteUserById = (userId) => {
     try {
       let user = await db.User.findOne({ where: { id: userId } });
       if (user) {
-        await user.destroy();
-        resolve();
+        await user.save();
+
+        let allUsers = await db.User.findAll();
+        resolve(allUsers);
       } else {
         resolve();
       }
